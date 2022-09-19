@@ -1,0 +1,37 @@
+
+#plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#plan-jeux {
+    margin: 2rem;
+    background: url('../img/planJeux.svg') no-repeat;
+    width: 1000px;
+    height: 1000px;
+}
+
+#de {
+
+    position: relative;
+    top: 75%;
+    left: 65%;
+
+    height: 200px;
+    width: 200px;
+    
+}
+
+#btnDe {
+    position: relative;
+    top: 70%;
+    left: 10%;
+
+    padding: 5px;
+    background-color: rgb(216, 27, 27);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-variant: small-caps;
+    font-size: 60px;
+}
