@@ -1,0 +1,36 @@
+ul li {
+    list-style: none;
+    padding: 0;
+}
+
+ul li img{
+    height: 2vh;
+}
+
+ul{
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+body>main>#menu-principal>ul{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#menu-principal{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#nomJoueur{
+    
+}

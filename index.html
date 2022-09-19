@@ -5,10 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake-And-Ladders</title>
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
     <main>
-        <section id="menu-principal"></section>
+        <section id="menu-principal">
+            <ul>
+                <li>
+                    <h1>Nombre de joueurs:</h1>
+                    <ul>
+                        <li>
+                            <input type="radio" name="nbJoueur" id="deuxJ">
+                            <label for="deuxJ">2 Joueurs</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="nbJoueur" id="troisJ">
+                            <label for="troisJ">3 Joueurs</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="nbJoueur" id="quatreJ">
+                            <label for="quatreJ">4 Joueurs</label>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul id="nomJoueur">
+                        <li>
+                            <label for="joueurUn">Joueur 1</label>
+                            <input type="text" name="nomJ" id="joueurUn">
+                            <img src="img/pion/pionRouge.png" alt="Pion joueur 1">
+                        </li>
+                        <li>
+                            <label for="joueurDeux">Joueur 2</label>
+                            <input type="text" name="nomJ" id="joueurDeux">
+                            <img src="img/pion/pionBleu.png" alt="Pion joueur 2">
+                        </li>
+                        <li>
+                            <label for="joueurTrois">Joueur 3</label>
+                            <input type="text" name="nomJ" id="joueurTrois">
+                            <img src="img/pion/pionVert.png" alt="Pion joueur 3">
+                        </li>
+                        <li>
+                            <label for="joueurQuatre">Joueur 4</label>
+                            <input type="text" name="nomJ" id="joueurQuatre">
+                            <img src="img/pion/pionOrange.png" alt="Pion joueur 4">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <input type="button" value="Start">
+        </section>
         <section id="plan-jeux"></section>
         <section id="question"></section>
     </main>
