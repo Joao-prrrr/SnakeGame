@@ -1,20 +1,47 @@
-ul li {
+#menu-principal ul li {
     list-style: none;
     padding: 0;
 }
 
-ul li img{
-    height: 2vh;
+#menu-principal>ul>li{
+    height: 50%;
 }
 
-ul{
+#menu-principal>ul {
+    height: 85%;
+}
+
+#menu-principal ul li img{
+    height: 2.5vh;
+}
+
+#menu-principal ul{
     padding: 0;
 }
 
-body {
+#menu-principal ul li ul {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 
+#menu-principal input[type="text"] {
+    height: 1.5rem;
+    border: 2px solid rgb(31, 31, 31);
+    border-radius: 4px;
+    padding: 3px;
+}
+
+#menu-principal {
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 100vh;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10%;
 }
 
 body>main>#menu-principal>ul{
@@ -29,8 +56,38 @@ body>main>#menu-principal>ul{
     width: 100%;
     align-items: center;
     justify-content: center;
+    font-size: 2rem;
 }
 
 #nomJoueur>li{
-    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 11vw;
+}
+
+#menu-principal input[type="button"]{
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+    width: 62%;
+    height: 2.5rem;
+    border-radius: 5px;
+    background-color: rgb(192, 192, 192);
+    border: 3px solid rgb(51, 51, 51);
+    transition: ease .75s;
+    font-size: 1.5rem;
+}
+
+#menu-principal input[type="button"]:hover {
+    transition: ease .75s;
+    height: 3rem;
+    width: 64%;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px rgb(90, 90, 90);
+}
+
+#question, #plan {
+    display: none;
 }
