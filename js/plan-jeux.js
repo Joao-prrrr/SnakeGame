@@ -4,30 +4,36 @@ const btnDe = document.getElementById('btnDe')
 const de = document.getElementById('de')
 
 
-let pionBleu = new Pion({
-    id: document.getElementById('pionBleu'),
-    enJeux: false,
-    case: 0,
-    position: {top: '70%', left: '0%'}
-})
-let pionVert = new Pion({
-    id: document.getElementById('pionVert'),
-    enJeux: false,
-    case: 0,
-    position: {top: '70%', left: '0%'}
-})
-let pionOrange = new Pion({
-    id: document.getElementById('pionOrange'),
-    enJeux: false,
-    case: 0,
-    position: {top: '70%', left: '0%'}
-})
 let pionRouge = new Pion({
+    nomJoueur: listJoueur[0],
     id: document.getElementById('pionRouge'),
     enJeux: false,
-    case: 0,
-    position: {top: '70%', left: '0%'}
+    case: 0
 })
+let pionBleu = new Pion({
+    nomJoueur: listJoueur[1],
+    id: document.getElementById('pionBleu'),
+    enJeux: false,
+    case: 0
+})
+
+if(listJoueur.length >= 3){
+    let pionVert = new Pion({
+        nomJoueur: listJoueur[2],
+        id: document.getElementById('pionVert'),
+        enJeux: false,
+        case: 0
+    })
+    if(listJoueur.length == 4){
+        let pionOrange = new Pion({
+            nomJoueur: listJoueur[3],
+            id: document.getElementById('pionOrange'),
+            enJeux: false,
+            case: 0
+        })
+    }
+
+}
 
 
 
@@ -41,9 +47,18 @@ btnDe.addEventListener('click', async function() {
     }
 
     tourneDe(nbAleatoire)
+
+
 })
 
-function avancePion(pion, nbAleatoire) {
+function debuterPartie() {
+    pionBleu.mettrePionEnPlace()
+    pionBleu.data.id.style.top = "65%"
+    pionBleu.data.id.style.left = "8%"
+
+    pionBleu.mettrePionEnPlace()
+    pionBleu.data.id.style.top = "65%"
+    pionBleu.data.id.style.left = "8%"
 
 }
 
