@@ -3,8 +3,13 @@
     justify-content: center;
 }
 
-ul li {
+#question ul{
+    padding: 0;
+}
+
+#question ul li {
     list-style: none;
+    padding: 0;
 }
 
 #question div {
