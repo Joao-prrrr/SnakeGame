@@ -1,5 +1,52 @@
-#question>ul>li>ul {
-    display: flex;
-    justify-content: space-between;
+#question {
+    align-items: center;
+    justify-content: center;
+}
+
+ul li {
     list-style: none;
+}
+
+#question div {
+    position: relative;
+    text-align: center;
+}
+
+#question div img {
+    height: 20vh;
+}
+
+#question div p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+body main #question ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body main #question #reponse{
+    display: flex;
+    flex-direction: column;
+}
+
+body main #question #reponse li input{
+    margin-bottom: 30px;
+}
+
+body main #question #reponse li button{
+    margin-top: 55px;
+    width: 3vw;
+    height: 2vh;
+    cursor: pointer;
 }
