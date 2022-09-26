@@ -35,7 +35,15 @@ if(listJoueur.length >= 3){
 
 }
 
+listPions = [pionRouge, pionBleu]
 
+try {
+    listPions.push(pionVert)
+} catch {console.log('vert exite pas')}
+
+try {
+    listPions.push(pionOrange)
+} catch {console.log('vert exite pas')}
 
 btnDe.addEventListener('click', async function() {
     nbAleatoire = randomNB(1, 6)
