@@ -37,6 +37,7 @@
 }
 
 .pions {
+    display: none;
     position: relative;
     top: 70%;
     width: 40px;
