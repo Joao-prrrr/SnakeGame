@@ -87,7 +87,3 @@ body>main>#menu-principal>ul{
     cursor: pointer;
     box-shadow: 2px 2px 2px 2px rgb(90, 90, 90);
 }
-
-#question, #plan {
-    display: none;
-}
