@@ -35,3 +35,9 @@
     font-variant: small-caps;
     font-size: 60px;
 }
+
+.pions {
+    position: relative;
+    top: 70%;
+    width: 40px;
+}
