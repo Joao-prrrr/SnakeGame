@@ -55,26 +55,50 @@ btnStart.addEventListener('click', function() {
             if (jQuatreName.trim() === "" || jTroisName.trim() === "") {
                 alert("Veuillez rentrer le nom de tous les joueurs");
             } else {
-                listJoueur.push(jUnName);
-                listJoueur.push(jDeuxName);
-                console.log(listJoueur[0]);
-                console.log(listJoueur[1]);
-                if (vertSelect === true) {
-                    listJoueur.push(jTroisName);
-                    console.log(listJoueur[2]);
-                    if (orangeSelect === true) {
-                        listJoueur.push(jQuatreName);
-                        console.log(listJoueur[3]);
-                    }
-                }
-                jUn.value = "";
-                jDeux.value = "";
-                jTrois.value = "";
-                jQuatre.value = "";
-                sectionMenu.style.display = "none";
-                sectionPlan.style.display = "flex";
-                sectionPlanJeux.style.display = "block";
+                addToList();
+                clearInput();
+                changeDisplay();
             }
+        } else {
+            addToList();
+            clearInput();
+            changeDisplay();
         }
+    } else {
+        addToList();
+        clearInput();
+        changeDisplay();
     }
 });
+
+function addToList() {
+    const jUnName = jUn.value;
+    const jDeuxName = jDeux.value;
+    const jTroisName = jTrois.value;
+    const jQuatreName = jQuatre.value;
+    listJoueur.push(jUnName);
+    listJoueur.push(jDeuxName);
+    console.log(listJoueur[0]);
+    console.log(listJoueur[1]);
+    if (vertSelect === true) {
+        listJoueur.push(jTroisName);
+        console.log(listJoueur[2]);
+        if (orangeSelect === true) {
+            listJoueur.push(jQuatreName);
+            console.log(listJoueur[3]);
+        }
+    }
+}
+
+function clearInput() {
+    jUn.value = "";
+    jDeux.value = "";
+    jTrois.value = "";
+    jQuatre.value = "";
+}
+
+function changeDisplay() {
+    sectionMenu.style.display = "none";
+    sectionPlan.style.display = "flex";
+    sectionPlanJeux.style.display = "block";
+}
