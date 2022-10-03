@@ -1,5 +1,3 @@
-
-
 const btnDe = document.getElementById('btnDe')
 const de = document.getElementById('de')
 let listPions;

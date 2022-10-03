@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#menu-principal>ul>li{
+#menu-principal>ul>li {
     height: 50%;
 }
 
@@ -11,11 +11,11 @@
     height: 85%;
 }
 
-#menu-principal ul li img{
+#menu-principal ul li img {
     height: 2.5vh;
 }
 
-#menu-principal ul{
+#menu-principal ul {
     padding: 0;
 }
 
@@ -44,7 +44,7 @@
     padding: 10%;
 }
 
-body>main>#menu-principal>ul{
+body>main>#menu-principal>ul {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -52,22 +52,22 @@ body>main>#menu-principal>ul{
     justify-content: space-around;
 }
 
-#menu-principal{
+#menu-principal {
     width: 100%;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
 }
 
-#nomJoueur>li{
+#nomJoueur>li {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 11vw;
+    width: 350px;
 }
 
-#menu-principal input[type="button"]{
+#menu-principal input[type="button"] {
     margin: auto;
     align-self: center;
     justify-self: center;
