@@ -2,6 +2,7 @@ const btnValider = document.getElementById("valider");
 const question = document.getElementById("question");
 const plan = document.getElementById("plan");
 const reponse = document.getElementById("correct").checked;
+const nomJoueur = 
 
 btnValider.addEventListener("click", function(){
     question.style.display = "none";
@@ -13,6 +14,6 @@ function verifReponse(){
 
     }
     else{
-        
+
     }
 }
