@@ -73,7 +73,7 @@ btnStart.addEventListener('click', function() {
                 jQuatre.value = "";
                 sectionMenu.style.display = "none";
                 sectionPlan.style.display = "flex";
-                sectionPlanJeux.style.display = "flex";
+                sectionPlanJeux.style.display = "block";
             }
         }
     }
