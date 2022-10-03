@@ -1,75 +1,103 @@
 const btnDe = document.getElementById('btnDe')
 const de = document.getElementById('de')
+let listPions;
+let partieEnJeu = false;
+let nbAleatoire;
 
 
-let pionRouge = new Pion({
+let pionRougeObj = new Pion({
     nomJoueur: listJoueur[0],
     id: document.getElementById('pionRouge'),
-    enJeux: false,
+    enJeu: true,
     case: 0
 })
-let pionBleu = new Pion({
+let pionBleuObj = new Pion({
     nomJoueur: listJoueur[1],
     id: document.getElementById('pionBleu'),
-    enJeux: false,
+    enJeu: false,
     case: 0
 })
 
-if (listJoueur.length >= 3) {
-    let pionVert = new Pion({
+if(listJoueur.length >= 2){
+    let pionVertObj = new Pion({
         nomJoueur: listJoueur[2],
         id: document.getElementById('pionVert'),
-        enJeux: false,
+        enJeu: false,
         case: 0
     })
-    if (listJoueur.length == 4) {
-        let pionOrange = new Pion({
+    if(listJoueur.length == 3){
+        let pionOrangeObj = new Pion({
             nomJoueur: listJoueur[3],
             id: document.getElementById('pionOrange'),
-            enJeux: false,
+            enJeu: false,
             case: 0
         })
     }
 
 }
 
-listPions = [pionRouge, pionBleu]
+listPions = [pionRougeObj, pionBleuObj]
 
 try {
-    listPions.push(pionVert)
-} catch { console.log('vert exite pas') }
+    listPions.push(pionVertObj)
+} catch {console.log('vert exite pas')}
 
 try {
-    listPions.push(pionOrange)
-} catch { console.log('vert exite pas') }
+    listPions.push(pionOrangeObj)
+} catch {console.log('Orange exite pas')}
 
 btnDe.addEventListener('click', async function() {
-    nbAleatoire = randomNB(1, 6)
-
-    for (i = 1; i <= 6; i++) {
-        console.log(i)
-        tourneDe(i);
-        await sleep(200)
-    }
-
-    tourneDe(nbAleatoire)
-
-
+    nbAleatoire = await lanceDe()
+    debuterPartie()
 })
 
-function debuterPartie() {
-    pionBleu.mettrePionEnPlace()
-    pionBleu.data.id.style.top = "65%"
-    pionBleu.data.id.style.left = "8%"
 
-    pionBleu.mettrePionEnPlace()
-    pionBleu.data.id.style.top = "65%"
-    pionBleu.data.id.style.left = "8%"
+function debuterPartie() {
+    partieEnJeu = true;
+
+    for(let i = 0; i < listPions.length; i++) {
+        let pion = listPions[i];
+        console.log(i)
+        pion.mettrePionEnPlace()
+        pion.data.id.style.top = "65%"
+        pion.data.id.style.left = "8%"
+    }
+
+    // listPions.forEach(function(pion){
+    //     pion.mettrePionEnPlace()
+    //     pion.data.id.style.top = "65%"
+    //     pion.data.id.style.left = "8%"
+    // })
+
+    while(partieEnJeu) {
+
+        listPions.forEach(function(pion) {
+            if(pion.data.enJeu) {
+                pion.avancer(nbAleatoire)
+                pion.data.enJeu = false
+            }
+        })
+    
+    }
 
 }
 
-function tourneDe(coteDe) {
-    de.src = `./img/de/de_${coteDe}.png`
+
+// functions du dés ----------------------
+async function lanceDe() {
+    coteDe = randomNB(1, 6)
+
+    for(let i = 1; i <= 6; i++){
+        console.log(i)
+        tourneDe(i)
+        await sleep(200)
+    }
+    tourneDe(coteDe)
+    return coteDe;
+
+}
+function tourneDe(cote) {
+    de.src = `./img/de/de_${cote}.png`
 }
 
 function randomNB(min, max) {
