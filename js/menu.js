@@ -37,7 +37,7 @@ quatreJchck.addEventListener("click", function() {
     troisJinput.style.display = "flex";
     vertSelect = true;
     quatreJinput.style.display = "flex";
-    vertSelect = true;
+    orangeSelect = true;
 });
 
 btnStart.addEventListener('click', function() {
