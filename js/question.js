@@ -12,18 +12,18 @@ const btnValider11 = document.getElementById("valider11");
 const btnValider12 = document.getElementById("valider12");
 const question = document.getElementById("question");
 const plan = document.getElementById("plan");
-const reponse1 = document.getElementById("correct1").checked;
-const reponse2 = document.getElementById("correct2").checked;
-const reponse3 = document.getElementById("correct3").checked;
-const reponse4 = document.getElementById("correct4").checked;
-const reponse5 = document.getElementById("correct5").checked;
-const reponse6 = document.getElementById("correct6").checked;
-const reponse7 = document.getElementById("correct7").checked;
-const reponse8 = document.getElementById("correct8").checked;
-const reponse9 = document.getElementById("correct9").checked;
-const reponse10 = document.getElementById("correct10").checked;
-const reponse11 = document.getElementById("correct11").checked;
-const reponse12 = document.getElementById("correct12").checked;
+const reponse1 = document.getElementById("correct1");
+const reponse2 = document.getElementById("correct2");
+const reponse3 = document.getElementById("correct3");
+const reponse4 = document.getElementById("correct4");
+const reponse5 = document.getElementById("correct5");
+const reponse6 = document.getElementById("correct6");
+const reponse7 = document.getElementById("correct7");
+const reponse8 = document.getElementById("correct8");
+const reponse9 = document.getElementById("correct9");
+const reponse10 = document.getElementById("correct10");
+const reponse11 = document.getElementById("correct11");
+const reponse12 = document.getElementById("correct12");
 
 btnValider1.addEventListener("click", function(){
     question.style.display = "none";
@@ -86,7 +86,7 @@ btnValider12.addEventListener("click", function(){
 });
 
 function verifReponse(){
-    if (reponse1 == true){
+    if (reponse1.checked){
 
     }
     else{
@@ -95,7 +95,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse2 == true){
+    if (reponse2.checked){
 
     }
     else{
@@ -104,7 +104,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse3 == true){
+    if (reponse3.checked){
 
     }
     else{
@@ -113,7 +113,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse4 == true){
+    if (reponse4.checked){
 
     }
     else{
@@ -122,7 +122,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse5 == true){
+    if (reponse5.checked){
 
     }
     else{
@@ -131,7 +131,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse6 == true){
+    if (reponse6.checked){
 
     }
     else{
@@ -140,7 +140,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse7 == true){
+    if (reponse7.checked){
 
     }
     else{
@@ -149,7 +149,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse8 == true){
+    if (reponse8.checked){
 
     }
     else{
@@ -158,7 +158,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse9 == true){
+    if (reponse9.checked){
 
     }
     else{
@@ -167,7 +167,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse10 == true){
+    if (reponse10.checked){
 
     }
     else{
@@ -176,7 +176,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse11 == true){
+    if (reponse11.checked){
 
     }
     else{
@@ -185,7 +185,7 @@ function verifReponse(){
 }
 
 function verifReponse(){
-    if (reponse12 == true){
+    if (reponse12.checked){
 
     }
     else{
