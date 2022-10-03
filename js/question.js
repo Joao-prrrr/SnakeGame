@@ -25,170 +25,158 @@ const reponse10 = document.getElementById("correct10");
 const reponse11 = document.getElementById("correct11");
 const reponse12 = document.getElementById("correct12");
 
-btnValider1.addEventListener("click", function(){
+btnValider1.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider2.addEventListener("click", function(){
+btnValider2.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider3.addEventListener("click", function(){
+btnValider3.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider4.addEventListener("click", function(){
+btnValider4.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider5.addEventListener("click", function(){
+btnValider5.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider6.addEventListener("click", function(){
+btnValider6.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider7.addEventListener("click", function(){
+btnValider7.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider8.addEventListener("click", function(){
+btnValider8.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider9.addEventListener("click", function(){
+btnValider9.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider10.addEventListener("click", function(){
+btnValider10.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider11.addEventListener("click", function(){
+btnValider11.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-btnValider12.addEventListener("click", function(){
+btnValider12.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
-function verifReponse(){
-    if (reponse1.checked){
+function verifReponse() {
+    if (reponse1.checked) {
 
-    }
-    else{
+    } else {
 
     }
 }
 
-function verifReponse(){
-    if (reponse2.checked){
+function verifReponse() {
+    if (reponse2.checked) {
 
-    }
-    else{
-
-    }
-}
-
-function verifReponse(){
-    if (reponse3.checked){
-
-    }
-    else{
+    } else {
 
     }
 }
 
-function verifReponse(){
-    if (reponse4.checked){
+function verifReponse() {
+    if (reponse3.checked) {
 
-    }
-    else{
-
-    }
-}
-
-function verifReponse(){
-    if (reponse5.checked){
-
-    }
-    else{
+    } else {
 
     }
 }
 
-function verifReponse(){
-    if (reponse6.checked){
+function verifReponse() {
+    if (reponse4.checked) {
 
-    }
-    else{
-
-    }
-}
-
-function verifReponse(){
-    if (reponse7.checked){
-
-    }
-    else{
+    } else {
 
     }
 }
 
-function verifReponse(){
-    if (reponse8.checked){
+function verifReponse() {
+    if (reponse5.checked) {
 
-    }
-    else{
-
-    }
-}
-
-function verifReponse(){
-    if (reponse9.checked){
-
-    }
-    else{
+    } else {
 
     }
 }
 
-function verifReponse(){
-    if (reponse10.checked){
+function verifReponse() {
+    if (reponse6.checked) {
 
-    }
-    else{
-
-    }
-}
-
-function verifReponse(){
-    if (reponse11.checked){
-
-    }
-    else{
+    } else {
 
     }
 }
 
-function verifReponse(){
-    if (reponse12.checked){
+function verifReponse() {
+    if (reponse7.checked) {
+
+    } else {
 
     }
-    else{
+}
+
+function verifReponse() {
+    if (reponse8.checked) {
+
+    } else {
+
+    }
+}
+
+function verifReponse() {
+    if (reponse9.checked) {
+
+    } else {
+
+    }
+}
+
+function verifReponse() {
+    if (reponse10.checked) {
+
+    } else {
+
+    }
+}
+
+function verifReponse() {
+    if (reponse11.checked) {
+
+    } else {
+
+    }
+}
+
+function verifReponse() {
+    if (reponse12.checked) {
+
+    } else {
 
     }
 }

@@ -1,5 +1,3 @@
-
-
 const btnDe = document.getElementById('btnDe')
 const de = document.getElementById('de')
 
@@ -17,14 +15,14 @@ let pionBleu = new Pion({
     case: 0
 })
 
-if(listJoueur.length >= 3){
+if (listJoueur.length >= 3) {
     let pionVert = new Pion({
         nomJoueur: listJoueur[2],
         id: document.getElementById('pionVert'),
         enJeux: false,
         case: 0
     })
-    if(listJoueur.length == 4){
+    if (listJoueur.length == 4) {
         let pionOrange = new Pion({
             nomJoueur: listJoueur[3],
             id: document.getElementById('pionOrange'),
@@ -39,16 +37,16 @@ listPions = [pionRouge, pionBleu]
 
 try {
     listPions.push(pionVert)
-} catch {console.log('vert exite pas')}
+} catch { console.log('vert exite pas') }
 
 try {
     listPions.push(pionOrange)
-} catch {console.log('vert exite pas')}
+} catch { console.log('vert exite pas') }
 
 btnDe.addEventListener('click', async function() {
     nbAleatoire = randomNB(1, 6)
 
-    for(i = 1; i <= 6; i++){
+    for (i = 1; i <= 6; i++) {
         console.log(i)
         tourneDe(i);
         await sleep(200)
