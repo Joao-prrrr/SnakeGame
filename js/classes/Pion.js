@@ -41,7 +41,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
         this.pionPosition.y = "2px"
 
     if (this.case <= 6) {
-        this.pionPosition.x = lignes.find(case => case == this.case)
+        this.pionPosition.x = lignes[this.case]
     }
 
 

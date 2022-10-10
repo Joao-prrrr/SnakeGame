@@ -46,11 +46,11 @@ btnStart.addEventListener('click', () => {
     }
     
     try {
-        listPion.push(pionVertObj)
+        listPions.push(pionVertObj)
     } catch {console.log('vert exite pas')}
     
     try {
-        listPion.push(pionOrangeObj)
+        listPions.push(pionOrangeObj)
     } catch {console.log('Orange exite pas')}
     debuterPartie()
 })
@@ -82,15 +82,15 @@ function debuterPartie() {
 
 function jouerTour() {
     let prochainJoueur = "";
-    for(let i = 0; i < listPion.length; i++) {
-        let joueur = listPion[i]
+    for(let i = 0; i < listPions.length; i++) {
+        let joueur = listPions[i]
         if(joueur.data.enJeu) {
             joueur.avancer(nbAleatoire)
             joueur.data.enJeu = false
-            if((listPion.findIndex(joueur => joueur) + 1) > listPion.length) {
+            if((listPions.findIndex(joueur => joueur) + 1) > listPions.length) {
                 prochainJoueur = 0;
             } else {
-                prochainJoueur = listPion[listPion.findIndex(joueur => joueur) + 1]
+                prochainJoueur = listPions[listPions.findIndex(joueur => joueur) + 1]
             }
         }
     }
