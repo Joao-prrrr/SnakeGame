@@ -94,15 +94,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
     mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
 
     // partie Louis
-    lstNbPremiers.forEach(nbQ => {
-        if (this.case == nbQ) {
-
-            showQuestion();
-        }
-    });
-
-
-
+    showQuestion();
 }
 
 function showQuestion() {
