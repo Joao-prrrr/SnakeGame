@@ -69,8 +69,15 @@ Pion.prototype.avancer = function(nbAleatoire) {
         this.pionPosition.x = lignes[this.case]
     }
 
+    mettreJourPosi()
+
     // partie Louis
-    showQuestion();
+    lstNbPremiers.forEach(nbQ => {
+        if(this.case == nbQ){
+
+            showQuestion();
+        }
+    });
 
 
 
@@ -83,4 +90,9 @@ function showQuestion() {
             document.getElementById("question" + nbQ).style.display = "flex";
         }
     })
+}
+
+function mettreJourPosi() {
+    this.data.id.style.top = this.pionPosition.y
+    this.data.id.style.left = this.pionPosition.x
 }
