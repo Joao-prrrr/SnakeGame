@@ -85,15 +85,15 @@ function debuterPartie() {
 
 function jouerTour() {
     let prochainJoueur = "";
-    for (let i = 0; i < listPion.length; i++) {
-        let joueur = listPion[i]
-        if (joueur.data.enJeu) {
+    for(let i = 0; i < listPions.length; i++) {
+        let joueur = listPions[i]
+        if(joueur.data.enJeu) {
             joueur.avancer(nbAleatoire)
             joueur.data.enJeu = false
-            if ((listPion.findIndex(joueur => joueur) + 1) > listPion.length) {
+            if((listPions.findIndex(joueur => joueur) + 1) > listPions.length) {
                 prochainJoueur = 0;
             } else {
-                prochainJoueur = listPion[listPion.findIndex(joueur => joueur) + 1]
+                prochainJoueur = listPions[listPions.findIndex(joueur => joueur) + 1]
             }
         }
     }
