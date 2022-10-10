@@ -5,6 +5,9 @@ let nbAleatoire = 0;
 const btnStart = document.getElementById('btnStart')
 let listPions = []
 
+let pionVertObj = ""
+let pionOrangeObj = ""
+
 btnDe.addEventListener('click', async function() {
     nbAleatoire = await lanceDe()
     jouerTour()
@@ -17,41 +20,45 @@ btnStart.addEventListener('click', () => {
         enJeu: true,
         case: 0
     })
-    
+
     let pionBleuObj = new Pion({
         nomJoueur: listJoueur[1],
         id: document.getElementById('pionBleu'),
         enJeu: false,
         case: 0
     })
-    
+
     listPions = [pionRougeObj, pionBleuObj]
-    
-    if(listJoueur.length > 2){
-        let pionVertObj = new Pion({
+
+    if (listJoueur.length > 2) {
+        pionVertObj = new Pion({
             nomJoueur: listJoueur[2],
             id: document.getElementById('pionVert'),
             enJeu: false,
             case: 0
         })
-        if(listJoueur.length == 3){
-            let pionOrangeObj = new Pion({
+        if (listJoueur.length == 4) {
+            pionOrangeObj = new Pion({
                 nomJoueur: listJoueur[3],
                 id: document.getElementById('pionOrange'),
                 enJeu: false,
                 case: 0
             })
         }
-    
+
     }
-    
+
     try {
-        listPion.push(pionVertObj)
-    } catch {console.log('vert exite pas')}
-    
+        if(pionVertObj !== ""){
+            listPions.push(pionVertObj)
+        }
+    } catch { console.log('vert exite pas') }
+
     try {
-        listPion.push(pionOrangeObj)
-    } catch {console.log('Orange exite pas')}
+        if(pionOrangeObj !== ""){
+            listPions.push(pionOrangeObj)
+        }
+    } catch { console.log('Orange exite pas') }
     debuterPartie()
 })
 
@@ -62,8 +69,8 @@ function debuterPartie() {
         let pion = listPions[i];
         console.log(i)
         pion.mettrePionEnPlace()
-        pion.data.id.style.top = "65%"
-        pion.data.id.style.left = "8%"
+        pion.data.id.style.top = "50%"
+        pion.data.id.style.left = "-5%"
     }
 
     // listJoueur.forEach(function(pion){
@@ -74,23 +81,23 @@ function debuterPartie() {
 
     // while(partieEnJeu) {
 
-        
-    
+
+
     // }
 
 }
 
 function jouerTour() {
     let prochainJoueur = "";
-    for(let i = 0; i < listPion.length; i++) {
-        let joueur = listPion[i]
-        if(joueur.data.enJeu) {
+    for (let i = 0; i < listPions.length; i++) {
+        let joueur = listPions[i]
+        if (joueur.data.enJeu) {
             joueur.avancer(nbAleatoire)
             joueur.data.enJeu = false
-            if((listPion.findIndex(joueur => joueur) + 1) > listPion.length) {
+            if ((listPions.findIndex(joueur => joueur) + 1) > listPions.length) {
                 prochainJoueur = 0;
             } else {
-                prochainJoueur = listPion[listPion.findIndex(joueur => joueur) + 1]
+                prochainJoueur = listPions[listPions.findIndex(joueur => joueur) + 1]
             }
         }
     }
