@@ -98,7 +98,7 @@ function jouerTour() {
         if (joueur.data.enJeu) {
             joueur.avancer(nbAleatoire)
             joueur.data.enJeu = false
-            if ((nbIndex + 1) > listPions.length) {
+            if ((nbIndex + 1) == listPions.length) {
                 prochainJoueur = 0;
                 nbIndex = 0;
             } else {
