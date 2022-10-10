@@ -39,7 +39,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
         
     }else if(this.case > 7 && this.case <= 14) {
         this.pionPosition.y = "2px"
-
+    }
     if (this.case <= 6) {
         this.pionPosition.x = lignes[this.case]
     }
@@ -51,6 +51,8 @@ Pion.prototype.avancer = function(nbAleatoire) {
     // partie Louis
     showQuestion();
 
+
+
 }
 
 function showQuestion() {
@@ -59,4 +61,4 @@ function showQuestion() {
             sectionQ.style.display = "flex";
             document.getElementById("question" + nbQ).style.display = "flex";
         }
-    })}}
+    })}
