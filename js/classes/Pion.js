@@ -5,34 +5,10 @@ const sectionQ = document.getElementById("question");
 const planJeu = document.getElementById('plan')
 const posiXY = [
 
-    {"50px": "650px"},
-    {"160px": "650px"},
-    {"286px": "650px"},
-    {"403px": "650px"},
-    {"530px": "650px"},
-    {"650px": "650px"},
-    {"770px": "650px"},
-    {"770px": "572px"},
-    {"770px": "496px"},
-    {"650px": "496px"},
-    {"530px": "496px"},
-    {"403px": "496px"},
-    {"286px": "496px"},
-    {"160px": "496px"},
-    {"50px": "496px"},
-    {"50px": "415px"},
-    {"50px": "336px"},
-    {"160px": "336px"},
-    {"286px": "336px"},
-    {"403px": "336px"},
-    {"530px": "336px"},
-    {"650px": "336px"},
-    {"770px": "336px"},
-    {"770px": "262px"},
-    {"770px": "180px"},
-    {"650px": "180px"},
-    {"530px": "180px"},
-    {"403px": "180px"},
+    {"50px": "650px"}, {"160px": "650px"},    {"286px": "650px"},    {"403px": "650px"},    {"530px": "650px"},    {"650px": "650px"},    {"770px": "650px"},
+    {"770px": "572px"},    {"770px": "496px"},    {"650px": "496px"},    {"530px": "496px"},    {"403px": "496px"},    {"286px": "496px"},    {"160px": "496px"},
+    {"50px": "496px"},    {"50px": "415px"},    {"50px": "336px"},    {"160px": "336px"},    {"286px": "336px"},    {"403px": "336px"},    {"530px": "336px"},
+    {"650px": "336px"},    {"770px": "336px"},    {"770px": "262px"},    {"770px": "180px"},    {"650px": "180px"},    {"530px": "180px"},    {"403px": "180px"},
     {"286px": "180px"},
     {"160px": "180px"},
     {"50px": "180px"},
@@ -71,7 +47,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
 
     points = posiXY[this.case]
     this.pionPosition.x = Object.keys(points)[0]
-    this.pionPosition.y = points[0]
+    this.pionPosition.y = points[Object.keys(points)[0]]
 
 
     mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)

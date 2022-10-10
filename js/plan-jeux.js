@@ -9,7 +9,6 @@ let listPions = []
 let pionVertObj = ""
 let pionOrangeObj = ""
 
-let nbIndex = 0;
 
 btnDe.addEventListener('click', async function() {
     nbAleatoire = await lanceDe()
@@ -73,7 +72,7 @@ function debuterPartie() {
         console.log(i)
         pion.mettrePionEnPlace()
         points = posiXY[0]
-        pion.data.id.style.top = points[0]
+        pion.data.id.style.top = points[Object.keys(points)]
         pion.data.id.style.left = Object.keys(points)[0]
     }
 
@@ -91,6 +90,8 @@ function debuterPartie() {
 
 }
 
+let nbIndex = 0;
+
 function jouerTour() {
     let prochainJoueur = "";
     for (let i = 0; i < listPions.length; i++) {
@@ -98,12 +99,11 @@ function jouerTour() {
         if (joueur.data.enJeu) {
             joueur.avancer(nbAleatoire)
             joueur.data.enJeu = false
-            if ((nbIndex + 1) == listPions.length) {
-                prochainJoueur = 0;
-                nbIndex = 0;
+
+            if ((listPions.indexOf(joueur) + 1) == listPions.length) {
+                prochainJoueur = listPions[0];
             } else {
-                prochainJoueur = listPions[nbIndex + 1]
-                nbIndex++;
+                prochainJoueur = listPions[listPions.indexOf(joueur) + 1]
             }
         }
     }
