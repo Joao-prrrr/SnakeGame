@@ -2,6 +2,7 @@
 // let this.pionPosition = "";
 const lstNbPremiers = [1, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
 const sectionQ = document.getElementById("question");
+const planJeu = document.getElementById('plan')
 const lignes = {
     0: "8%",
     1: "16%",
@@ -59,10 +60,11 @@ let Pion = function(data) {
 Pion.prototype.mettrePionEnPlace = function() {
     this.data.id.style.display = "inline"
     this.data.case = 0
-
+    
 }
 
 Pion.prototype.avancer = function(nbAleatoire) {
+    this.data.case += nbAleatoire
     this.case += nbAleatoire
     if (this.case <= 6) {
         this.pionPosition.y = "50%"
@@ -87,7 +89,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
     } else if(this.case == 31) {
         this.pionPosition.y = "-6%"
     }
-    
+
     this.pionPosition.x = lignes[this.case - 1]
 
 
@@ -108,6 +110,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
 function showQuestion() {
     lstNbPremiers.forEach(nbQ => {
         if (this.case === nbQ) {
+            planJeu.style.display = "none";
             sectionQ.style.display = "flex";
             document.getElementById("question" + nbQ).style.display = "flex";
         }
@@ -117,4 +120,23 @@ function showQuestion() {
 function mettreJourPosi(pionId, x, y) {
     pionId.style.top = y
     pionId.style.left = x
+}
+
+function echellesTuyeaux() {
+    if (this.pionPosition.x === lignes[20] && this.pionPosition.y === "18%") {
+        this.pionPosition.x = lignes[3];
+        this.pionPosition.y = "50%";
+    } else if (this.pionPosition.x === lignes[8] && this.pionPosition.y === "35%") {
+        this.pionPosition.x = lignes[22];
+        this.pionPosition.y = "18%";
+    } else if (this.pionPosition.x === lignes[12] && this.pionPosition.y === "35%") {
+        this.pionPosition.x = lignes[27];
+        this.pionPosition.y = "3%";
+    } else if (this.pionPosition.x === lignes[26] && this.pionPosition.y === "3%") {
+        this.pionPosition.x = lignes[35];
+        this.pionPosition.y = "-6%";
+    } else if (this.pionPosition.x === lignes[34] && this.pionPosition.y === "-6%") {
+        this.pionPosition.x = lignes[28];
+        this.pionPosition.y = "3%";
+    }
 }
