@@ -9,6 +9,7 @@
     background: url('../img/planJeux.svg') no-repeat;
     width: 1000px;
     height: 1000px;
+    position: relative;
 }
 
 #de {
@@ -33,7 +34,7 @@
 
 .pions {
     display: none;
-    position: relative;
+    position: absolute;
     top: 70%;
     width: 40px;
 }
