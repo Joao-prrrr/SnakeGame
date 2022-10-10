@@ -11,6 +11,7 @@ const lignes = {
     5: "65%",
     6: "77%",
     7: "77%",
+    15: "8%",
     14: "8%",
     13: "16%",
     12: "30%",
@@ -25,13 +26,21 @@ const lignes = {
     20: "55%",
     21: "65%",
     22: "77%",
+    23: "77%",
     30: "8%",
     29: "16%",
     28: "30%",
     27: "40%",
     26: "55%",
     25: "65%",
-    24: "77%"
+    24: "77%",
+    32: "8%",
+    33: "16%",
+    34: "30%",
+    35: "40%",
+    36: "55%",
+    37: "65%",
+    38: "77%"
 }
 
 
@@ -56,19 +65,31 @@ Pion.prototype.mettrePionEnPlace = function() {
 Pion.prototype.avancer = function(nbAleatoire) {
     this.case += nbAleatoire
     if (this.case <= 6) {
-        this.pionPosition.y = "65%"
-    } else if (this.case > 7 && this.case <= 14) {
         this.pionPosition.y = "50%"
-
     } else if (this.case > 7 && this.case <= 14) {
+        this.pionPosition.y = "35%"
+
+    } else if (this.case > 15 && this.case <= 22) {
         this.pionPosition.y = "18%"
 
-    } else if (this.case > 7 && this.case <= 14) {
-        this.pionPosition.y = "2%"
+    } else if (this.case > 23 && this.case <= 30) {
+        this.pionPosition.y = "3%"
+    } else if (this.case > 31 && this.case <= 38) {
+        this.pionPosition.y = "3%"
     }
-    if (this.case <= 6) {
-        this.pionPosition.x = lignes[this.case]
+
+    if(this.case == 7) {
+        this.pionPosition.y = "42%"
+    } else if(this.case == 15) {
+        this.pionPosition.y = "25%"
+    } else if(this.case == 23) {
+        this.pionPosition.y = "10%"
+    } else if(this.case == 31) {
+        this.pionPosition.y = "-6%"
     }
+    
+    this.pionPosition.x = lignes[this.case - 1]
+
 
     mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
 

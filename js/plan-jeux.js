@@ -69,8 +69,8 @@ function debuterPartie() {
         let pion = listPions[i];
         console.log(i)
         pion.mettrePionEnPlace()
-        pion.data.id.style.top = "65%"
-        pion.data.id.style.left = "8%"
+        pion.data.id.style.top = "50%"
+        pion.data.id.style.left = "-5%"
     }
 
     // listJoueur.forEach(function(pion){
