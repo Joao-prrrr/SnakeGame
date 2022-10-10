@@ -3,6 +3,7 @@
 const lstNbPremiers = [1, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
 const sectionQ = document.getElementById("question");
 const planJeu = document.getElementById('plan')
+const sectionG = document.getElementById('gagnant')
 const posiXY = [
 
     {"50px": "650px"}, {"160px": "650px"},    {"286px": "650px"},    {"403px": "650px"},    {"530px": "650px"},    {"650px": "650px"},    {"770px": "650px"},
@@ -45,10 +46,14 @@ Pion.prototype.avancer = function(nbAleatoire) {
     this.data.case += nbAleatoire
     this.case += nbAleatoire
 
+    if(this.case >= 38) {
+        this.case = 38
+    }
     points = posiXY[this.case]
     this.pionPosition.x = Object.keys(points)[0]
     this.pionPosition.y = points[Object.keys(points)[0]]
-
+    
+    verifieGagnant(this.case)
 
     mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
 
@@ -77,6 +82,15 @@ function showQuestion() {
 function mettreJourPosi(pionId, x, y) {
     pionId.style.top = y
     pionId.style.left = x
+}
+
+function verifieGagnant(Jcase) {
+    if(Jcase == 38) {
+        setTimeout(() => {
+            plan.style.display = "none"
+            sectionG.style.display = "flex"
+        }, 2000)
+    }
 }
 
 function echellesTuyeaux() {
