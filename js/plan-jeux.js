@@ -2,7 +2,7 @@ const btnDe = document.getElementById('btnDe')
 const de = document.getElementById('de')
 let listPions;
 let partieEnJeu = false;
-let nbAleatoire;
+let nbAleatoire = 0;
 
 
 let pionRougeObj = new Pion({
@@ -11,6 +11,7 @@ let pionRougeObj = new Pion({
     enJeu: true,
     case: 0
 })
+
 let pionBleuObj = new Pion({
     nomJoueur: listJoueur[1],
     id: document.getElementById('pionBleu'),
