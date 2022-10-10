@@ -10,6 +10,7 @@ const lignes = {
     4: "55%",
     5: "65%",
     6: "77%",
+    7: "77%",
     14: "8%",
     13: "16%",
     12: "30%",
@@ -47,7 +48,7 @@ let Pion = function(data) {
 }
 
 Pion.prototype.mettrePionEnPlace = function() {
-    this.data.id.style.display = "block"
+    this.data.id.style.display = "inline"
     this.data.case = 0
 
 }

@@ -49,11 +49,15 @@ btnStart.addEventListener('click', () => {
     }
 
     try {
-        listPions.push(pionVertObj)
+        if(pionVertObj !== ""){
+            listPions.push(pionVertObj)
+        }
     } catch { console.log('vert exite pas') }
 
     try {
-        listPions.push(pionOrangeObj)
+        if(pionVertObj !== ""){
+            listPions.push(pionOrangeObj)
+        }
     } catch { console.log('Orange exite pas') }
     debuterPartie()
 })
