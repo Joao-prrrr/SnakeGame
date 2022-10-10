@@ -78,24 +78,24 @@ Pion.prototype.avancer = function(nbAleatoire) {
         this.pionPosition.y = "3%"
     }
 
-    if(this.case == 7) {
+    if (this.case == 7) {
         this.pionPosition.y = "42%"
-    } else if(this.case == 15) {
+    } else if (this.case == 15) {
         this.pionPosition.y = "25%"
-    } else if(this.case == 23) {
+    } else if (this.case == 23) {
         this.pionPosition.y = "10%"
-    } else if(this.case == 31) {
+    } else if (this.case == 31) {
         this.pionPosition.y = "-6%"
     }
-    
-    this.pionPosition.x = lignes[this.case - 1]
+
+    this.pionPosition.x = lignes[this.case-1]
 
 
     mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
 
     // partie Louis
     lstNbPremiers.forEach(nbQ => {
-        if(this.case == nbQ){
+        if (this.case == nbQ) {
 
             showQuestion();
         }
@@ -117,4 +117,23 @@ function showQuestion() {
 function mettreJourPosi(pionId, x, y) {
     pionId.style.top = y
     pionId.style.left = x
+}
+
+function echellesTuyeaux() {
+    if (this.pionPosition.x === lignes[20] && this.pionPosition.y === "18%") {
+        this.pionPosition.x = lignes[3];
+        this.pionPosition.y = "50%";
+    } else if (this.pionPosition.x === lignes[8] && this.pionPosition.y === "35%") {
+        this.pionPosition.x = lignes[22];
+        this.pionPosition.y = "18%";
+    } else if (this.pionPosition.x === lignes[12] && this.pionPosition.y === "35%") {
+        this.pionPosition.x = lignes[27];
+        this.pionPosition.y = "3%";
+    } else if (this.pionPosition.x === lignes[26] && this.pionPosition.y === "3%") {
+        this.pionPosition.x = lignes[35];
+        this.pionPosition.y = "-6%";
+    } else if (this.pionPosition.x === lignes[34] && this.pionPosition.y === "-6%") {
+        this.pionPosition.x = lignes[28];
+        this.pionPosition.y = "3%";
+    }
 }
