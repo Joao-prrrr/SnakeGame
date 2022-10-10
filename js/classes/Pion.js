@@ -1,23 +1,33 @@
-let pionId = "";
-let pionPosition = "";
+// let this.data.id = "";
+// let this.pionPosition = "";
+
+
+
 
 let Pion = function(data) {
     this.data = data;
-    // id: document.getElementById('pionBleu'),
+    // id: document.getElementById('pionRouge'),
     // enJeux: false,
     // case: 0
+<<<<<<< HEAD
     pionId = this.data.id
     pionPosition = { x: pionId.style.left.slice(-1), y: pionId.style.top.slice(-1) }
+=======
+    // this.data.id = this.data.id
+    this.case = this.data.case
+    this.pionPosition = {x: this.data.id.style.left.slice(-1), y: this.data.id.style.top.slice(-1)}
+>>>>>>> 5783d43caae4eb2118687351dd1e51640783188c
 
 }
 
 Pion.prototype.mettrePionEnPlace = function() {
-    pionId.style.display = "block"
+    this.data.id.style.display = "block"
     this.data.case = 0
 
 }
 
 Pion.prototype.avancer = function(nbAleatoire) {
+<<<<<<< HEAD
 
     for (let i = 1; i <= nbAleatoire; i++) {
 
@@ -32,4 +42,20 @@ Pion.prototype.avancer = function(nbAleatoire) {
 
         this.data.case += i
     }
+=======
+    
+    if(this.case >)
+
+
+
+
+
+// partie Louis
+
+
+}
+
+function question() {
+
+>>>>>>> 5783d43caae4eb2118687351dd1e51640783188c
 }

@@ -85,97 +85,150 @@ btnValider12.addEventListener("click", function() {
     plan.style.display = "flex";
 });
 
+function randQuestion() {
+    let i = Math.floor(Math.random(1, 13));
+    document.getElementById("question" + i).style.display = "flex";
+}
+
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse1.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse2.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse3.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse4.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse5.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse6.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse7.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse8.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse9.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse10.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse11.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
 }
 
 function verifReponse() {
+    let pionEnJeu = ""
+    listJoueur.forEach(joueur => {
+        pionEnJeu = joueur
+    });
     if (reponse12.checked) {
-
+        joueur.avance(3)
     } else {
 
     }
