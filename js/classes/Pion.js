@@ -50,10 +50,12 @@ Pion.prototype.avancer = function(nbAleatoire) {
     }
 
     function showQuestion() {
+        let rndNb;
         lstNbPremiers.forEach(nbQ => {
             if (this.case === nbQ) {
+                rndNb = Math.floor(Math.random(1, 31))
                 sectionQ.style.display = "flex";
-                document.getElementById("question" + nbQ).style.display = "flex";
+                document.getElementById("question" + rndNb).style.display = "flex";
             }
         })
     }
