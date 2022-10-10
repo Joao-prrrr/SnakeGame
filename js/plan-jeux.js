@@ -5,8 +5,6 @@ let nbAleatoire = 0;
 const btnStart = document.getElementById('btnStart')
 let listPion = []
 
-
-
 btnDe.addEventListener('click', async function() {
     nbAleatoire = await lanceDe()
     jouerTour()
@@ -60,8 +58,8 @@ btnStart.addEventListener('click', () => {
 function debuterPartie() {
     partieEnJeu = true;
 
-    for(let i = 0; i < listPion.length; i++) {
-        let pion = listPion[i];
+    for (let i = 0; i < listPions.length; i++) {
+        let pion = listPions[i];
         console.log(i)
         pion.mettrePionEnPlace()
         pion.data.id.style.top = "65%"
@@ -103,7 +101,7 @@ function jouerTour() {
 async function lanceDe() {
     coteDe = randomNB(1, 6)
 
-    for(let i = 1; i <= 6; i++){
+    for (let i = 1; i <= 6; i++) {
         console.log(i)
         tourneDe(i)
         await sleep(200)
@@ -112,6 +110,7 @@ async function lanceDe() {
     return coteDe;
 
 }
+
 function tourneDe(cote) {
     de.src = `./img/de/de_${cote}.png`
 }
