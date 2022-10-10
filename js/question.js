@@ -60,6 +60,16 @@ const reponse27 = document.getElementById("correct27");
 const reponse28 = document.getElementById("correct28");
 const reponse29 = document.getElementById("correct29");
 const reponse30 = document.getElementById("correct30");
+const joueur = document.getElementById("joueur");
+
+let nomPion = "";
+listPions.forEach(pion => {
+    if (pion.data.enJeu) {
+        nomPion = pion.data.joueur
+    }
+});
+
+joueur.textContent = nomPion + ", vous devez répondre";
 
 btnValider1.addEventListener("click", function() {
     question.style.display = "none";
@@ -210,6 +220,8 @@ btnValider30.addEventListener("click", function() {
     question.style.display = "none";
     plan.style.display = "flex";
 });
+
+
 
 function verifReponse() {
     let pionEnJeu = ""
