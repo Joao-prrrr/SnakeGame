@@ -121,3 +121,22 @@ function mettreJourPosi(pionId, x, y) {
     pionId.style.top = y
     pionId.style.left = x
 }
+
+function echellesTuyeaux() {
+    if (this.pionPosition.x === lignes[20] && this.pionPosition.y === "18%") {
+        this.pionPosition.x = lignes[3];
+        this.pionPosition.y = "50%";
+    } else if (this.pionPosition.x === lignes[8] && this.pionPosition.y === "35%") {
+        this.pionPosition.x = lignes[22];
+        this.pionPosition.y = "18%";
+    } else if (this.pionPosition.x === lignes[12] && this.pionPosition.y === "35%") {
+        this.pionPosition.x = lignes[27];
+        this.pionPosition.y = "3%";
+    } else if (this.pionPosition.x === lignes[26] && this.pionPosition.y === "3%") {
+        this.pionPosition.x = lignes[35];
+        this.pionPosition.y = "-6%";
+    } else if (this.pionPosition.x === lignes[34] && this.pionPosition.y === "-6%") {
+        this.pionPosition.x = lignes[28];
+        this.pionPosition.y = "3%";
+    }
+}
