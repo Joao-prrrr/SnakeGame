@@ -3,34 +3,34 @@
 const lstNbPremiers = [1, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
 const sectionQ = document.getElementById("question");
 const lignes = {
-    0: "8px",
-    1: "16px",
-    2: "30px",
-    3: "40px",
-    4: "55px",
-    5: "65px",
-    6: "77px",
-    14: "8px",
-    13: "16px",
-    12: "30px",
-    11: "40px",
-    10: "55px",
-    9: "65px",
-    8: "77px",
-    16: "8px",
-    17: "16px",
-    18: "30px",
-    19: "40px",
-    20: "55px",
-    21: "65px",
-    22: "77px",
-    30: "8px",
-    29: "16px",
-    28: "30px",
-    27: "40px",
-    26: "55px",
-    25: "65px",
-    24: "77px"
+    0: "8%",
+    1: "16%",
+    2: "30%",
+    3: "40%",
+    4: "55%",
+    5: "65%",
+    6: "77%",
+    14: "8%",
+    13: "16%",
+    12: "30%",
+    11: "40%",
+    10: "55%",
+    9: "65%",
+    8: "77%",
+    16: "8%",
+    17: "16%",
+    18: "30%",
+    19: "40%",
+    20: "55%",
+    21: "65%",
+    22: "77%",
+    30: "8%",
+    29: "16%",
+    28: "30%",
+    27: "40%",
+    26: "55%",
+    25: "65%",
+    24: "77%"
 }
 
 
@@ -53,23 +53,23 @@ Pion.prototype.mettrePionEnPlace = function() {
 }
 
 Pion.prototype.avancer = function(nbAleatoire) {
-
+    this.case += nbAleatoire
     if (this.case <= 6) {
-        this.pionPosition.y = "65px"
+        this.pionPosition.y = "65%"
     } else if (this.case > 7 && this.case <= 14) {
-        this.pionPosition.y = "50px"
+        this.pionPosition.y = "50%"
 
     } else if (this.case > 7 && this.case <= 14) {
-        this.pionPosition.y = "18px"
+        this.pionPosition.y = "18%"
 
     } else if (this.case > 7 && this.case <= 14) {
-        this.pionPosition.y = "2px"
+        this.pionPosition.y = "2%"
     }
     if (this.case <= 6) {
         this.pionPosition.x = lignes[this.case]
     }
 
-    mettreJourPosi()
+    mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
 
     // partie Louis
     lstNbPremiers.forEach(nbQ => {
@@ -92,7 +92,7 @@ function showQuestion() {
     })
 }
 
-function mettreJourPosi() {
-    this.data.id.style.top = this.pionPosition.y
-    this.data.id.style.left = this.pionPosition.x
+function mettreJourPosi(pionId, x, y) {
+    pionId.style.top = y
+    pionId.style.left = x
 }
