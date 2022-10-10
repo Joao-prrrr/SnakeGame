@@ -1,6 +1,5 @@
 const btnDe = document.getElementById('btnDe')
 const de = document.getElementById('de')
-let listPions;
 let partieEnJeu = false;
 let nbAleatoire = 0;
 
@@ -19,7 +18,9 @@ let pionBleuObj = new Pion({
     case: 0
 })
 
-if(listJoueur.length >= 2){
+listJoueur = [pionRougeObj, pionBleuObj]
+
+if(listJoueur.length > 2){
     let pionVertObj = new Pion({
         nomJoueur: listJoueur[2],
         id: document.getElementById('pionVert'),
@@ -37,14 +38,12 @@ if(listJoueur.length >= 2){
 
 }
 
-listPions = [pionRougeObj, pionBleuObj]
-
 try {
-    listPions.push(pionVertObj)
+    listJoueur.push(pionVertObj)
 } catch {console.log('vert exite pas')}
 
 try {
-    listPions.push(pionOrangeObj)
+    listJoueur.push(pionOrangeObj)
 } catch {console.log('Orange exite pas')}
 
 btnDe.addEventListener('click', async function() {
@@ -56,30 +55,27 @@ btnDe.addEventListener('click', async function() {
 function debuterPartie() {
     partieEnJeu = true;
 
-    for(let i = 0; i < listPions.length; i++) {
-        let pion = listPions[i];
+    for(let i = 0; i < listJoueur.length; i++) {
+        let pion = listJoueur[i];
         console.log(i)
         pion.mettrePionEnPlace()
         pion.data.id.style.top = "65%"
         pion.data.id.style.left = "8%"
     }
 
-    // listPions.forEach(function(pion){
+    // listJoueur.forEach(function(pion){
     //     pion.mettrePionEnPlace()
     //     pion.data.id.style.top = "65%"
     //     pion.data.id.style.left = "8%"
     // })
 
-    while(partieEnJeu) {
+    // while(partieEnJeu) {
 
-        listPions.forEach(function(pion) {
-            if(pion.data.enJeu) {
-                pion.avancer(nbAleatoire)
-                pion.data.enJeu = false
-            }
-        })
+        
     
-    }
+    // }
+
+    
 
 }
 
