@@ -85,6 +85,11 @@ btnValider12.addEventListener("click", function() {
     plan.style.display = "flex";
 });
 
+function randQuestion() {
+    let i = Math.floor(Math.random(1, 13));
+    document.getElementById("question" + i).style.display = "flex";
+}
+
 function verifReponse() {
     if (reponse1.checked) {
 
