@@ -3,7 +3,7 @@ const de = document.getElementById('de')
 let partieEnJeu = false;
 let nbAleatoire = 0;
 const btnStart = document.getElementById('btnStart')
-let listPion = []
+let listPions = []
 
 btnDe.addEventListener('click', async function() {
     nbAleatoire = await lanceDe()
@@ -25,7 +25,7 @@ btnStart.addEventListener('click', () => {
         case: 0
     })
     
-    listPion = [pionRougeObj, pionBleuObj]
+    listPions = [pionRougeObj, pionBleuObj]
     
     if(listJoueur.length > 2){
         let pionVertObj = new Pion({

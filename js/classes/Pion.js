@@ -24,7 +24,15 @@ Pion.prototype.mettrePionEnPlace = function() {
 Pion.prototype.avancer = function(nbAleatoire) {
     
     if(this.case <= 6) {
-        this.pionPosition
+        this.pionPosition.y = "65px"
+    } else if(this.case > 7 && this.case <= 14) {
+        this.pionPosition.y = "50px"
+        
+    }else if(this.case > 7 && this.case <= 14) {
+        this.pionPosition.y = "18px"
+        
+    }else if(this.case > 7 && this.case <= 14) {
+        this.pionPosition.y = "2px"
     }
 
 
