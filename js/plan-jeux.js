@@ -5,6 +5,7 @@ let nbAleatoire = 0;
 const btnStart = document.getElementById('btnStart')
 let listPions = []
 
+
 let pionVertObj = ""
 let pionOrangeObj = ""
 
@@ -71,8 +72,9 @@ function debuterPartie() {
         let pion = listPions[i];
         console.log(i)
         pion.mettrePionEnPlace()
-        pion.data.id.style.top = "50%"
-        pion.data.id.style.left = "-5%"
+        points = posiXY[0]
+        pion.data.id.style.top = points[0]
+        pion.data.id.style.left = Object.keys(points)[0]
     }
 
     // listJoueur.forEach(function(pion){
