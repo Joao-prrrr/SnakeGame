@@ -55,7 +55,7 @@ btnStart.addEventListener('click', () => {
     } catch { console.log('vert exite pas') }
 
     try {
-        if(pionVertObj !== ""){
+        if(pionOrangeObj !== ""){
             listPions.push(pionOrangeObj)
         }
     } catch { console.log('Orange exite pas') }
