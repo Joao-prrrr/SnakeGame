@@ -11,7 +11,7 @@ let Pion = function(data) {
     // case: 0
     // this.data.id = this.data.id
     this.case = this.data.case
-    this.pionPosition = {x: this.data.id.style.left.slice(-1), y: this.data.id.style.top.slice(-1)}
+    this.pionPosition = {x: this.data.id.style.left, y: this.data.id.style.top}
 
 }
 
@@ -23,7 +23,9 @@ Pion.prototype.mettrePionEnPlace = function() {
 
 Pion.prototype.avancer = function(nbAleatoire) {
     
-    if(this.case >)
+    if(this.case <= 6) {
+        this.pionPosition
+    }
 
 
 
