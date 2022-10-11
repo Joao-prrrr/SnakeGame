@@ -52,26 +52,19 @@ Pion.prototype.avancer = function(nbAleatoire) {
     points = posiXY[this.case]
     this.pionPosition.x = Object.keys(points)[0]
     this.pionPosition.y = points[Object.keys(points)[0]]
+    mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
     
     verifieGagnant(this.case)
 
-    mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
+    if()
 
-    // partie Louis
-    lstNbPremiers.forEach(nbQ => {
-        if(this.case == nbQ){
-
-            showQuestion();
-        }
-    });
-
-
+    showQuestion(this.case)
 
 }
 
-function showQuestion() {
+function showQuestion(jcase) {
     lstNbPremiers.forEach(nbQ => {
-        if (this.case === nbQ) {
+        if (jcase === nbQ) {
             planJeu.style.display = "none";
             sectionQ.style.display = "flex";
             document.getElementById("question" + nbQ).style.display = "flex";
@@ -93,21 +86,21 @@ function verifieGagnant(Jcase) {
     }
 }
 
-function echellesTuyeaux() {
-    if (this.pionPosition.x === posiXY[20] && this.pionPosition.y === "18%") {
+function echellesTuyeaux(pionPosition) {
+    if (pionPosition.x === posiXY[20] && pionPosition.y === "18%") {
         this.pionPosition.x = posiXY[3];
         this.pionPosition.y = "50%";
-    } else if (this.pionPosition.x === posiXY[8] && this.pionPosition.y === "35%") {
-        this.pionPosition.x = posiXY[22];
-        this.pionPosition.y = "18%";
-    } else if (this.pionPosition.x === posiXY[12] && this.pionPosition.y === "35%") {
-        this.pionPosition.x = posiXY[27];
-        this.pionPosition.y = "3%";
-    } else if (this.pionPosition.x === posiXY[26] && this.pionPosition.y === "3%") {
-        this.pionPosition.x = posiXY[35];
-        this.pionPosition.y = "-6%";
-    } else if (this.pionPosition.x === posiXY[34] && this.pionPosition.y === "-6%") {
-        this.pionPosition.x = posiXY[28];
-        this.pionPosition.y = "3%";
+    } else if (pionPosition.x === posiXY[8] && pionPosition.y === "35%") {
+        pionPosition.x = posiXY[22];
+        pionPosition.y = "18%";
+    } else if (pionPosition.x === posiXY[12] && pionPosition.y === "35%") {
+        pionPosition.x = posiXY[27];
+        pionPosition.y = "3%";
+    } else if (pionPosition.x === posiXY[26] && pionPosition.y === "3%") {
+        pionPosition.x = posiXY[35];
+        pionPosition.y = "-6%";
+    } else if (pionPosition.x === posiXY[34] && pionPosition.y === "-6%") {
+        pionPosition.x = posiXY[28];
+        pionPosition.y = "3%";
     }
 }
