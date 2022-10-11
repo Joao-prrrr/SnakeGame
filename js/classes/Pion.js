@@ -52,19 +52,21 @@ Pion.prototype.avancer = function(nbAleatoire) {
     points = posiXY[this.case]
     this.pionPosition.x = Object.keys(points)[0]
     this.pionPosition.y = points[Object.keys(points)[0]]
-    mettreJourPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
+    mettreJoueurPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
     
-    verifieGagnant(this.case)
-
-
-
-    showQuestion(this.case)
+    setTimeout(() => {
+        verifieGagnant(this.case)
+        showQuestion(this.case, this.data.nomJoueur)
+    }, 2000)
 
 }
 
-function showQuestion(jcase) {
+function showQuestion(jcase, nickname) {
     lstNbPremiers.forEach(nbQ => {
         if (jcase === nbQ) {
+            let phrase = document.getElementById('joueurNickname').innerHTML
+            console.log(phrase)
+            document.getElementById('joueurNickname').innerHTML = nickname + phrase
             planJeu.style.display = "none";
             sectionQ.style.display = "flex";
             document.getElementById("question" + nbQ).style.display = "flex";
@@ -72,17 +74,16 @@ function showQuestion(jcase) {
     })
 }
 
-function mettreJourPosi(pionId, x, y) {
+function mettreJoueurPosi(pionId, x, y) {
     pionId.style.top = y
     pionId.style.left = x
 }
 
 function verifieGagnant(Jcase) {
     if(Jcase == 38) {
-        setTimeout(() => {
             plan.style.display = "none"
             sectionG.style.display = "flex"
-        }, 2000)
+        
     }
 }
 

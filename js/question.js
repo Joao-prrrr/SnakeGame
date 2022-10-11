@@ -60,16 +60,23 @@ const reponse27 = document.getElementById("correct27");
 const reponse28 = document.getElementById("correct28");
 const reponse29 = document.getElementById("correct29");
 const reponse30 = document.getElementById("correct30");
+
+const listRep = [
+    reponse1, reponse2, reponse3, reponse4, reponse5, reponse6, reponse7, reponse8, reponse9, reponse10,
+    reponse11, reponse12, reponse13, reponse14, reponse15, reponse16, reponse17, reponse18, reponse19, reponse20,
+    reponse21, reponse22, reponse23, reponse24, reponse25, reponse26, reponse27, reponse28, reponse29, reponse30,
+]
+
 const joueur = document.getElementById("joueur");
 
-let nomPion = "";
-listPions.forEach(pion => {
-    if (pion.data.enJeu) {
-        nomPion = pion.data.joueur
-    }
-});
+// let nomPion = "";
+// listPions.forEach(pion => {
+//     if (pion.data.enJeu) {
+//         nomPion = pion.data.joueur
+//     }
+// });
 
-joueur.textContent = nomPion + ", vous devez répondre";
+// joueur.textContent = nomPion + ", vous devez répondre";
 
 btnValider1.addEventListener("click", function() {
     question.style.display = "none";
@@ -225,360 +232,364 @@ btnValider30.addEventListener("click", function() {
 
 function verifReponse() {
     let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse1.checked) {
-        joueur.avance(3)
-    } else {
 
-    }
+    listPions.forEach(pion => {
+        if(pion.data.enJeu) {
+            pionEnJeu = pion
+        }
+    })
+
+    listRep.forEach(rep => {
+        if(rep.checked) {
+            pionEnJeu.avance(3)
+        }
+    })
 }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse2.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse2.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse3.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse3.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse4.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse4.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse5.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse5.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse6.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse6.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse7.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse7.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse8.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse8.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse9.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse9.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse10.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse10.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse11.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse11.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse12.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse12.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse13.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse13.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse14.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse14.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse15.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse15.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse16.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse16.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse17.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse17.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse18.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse18.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse19.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse19.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse20.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse20.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse21.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse21.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse22.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse22.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse23.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse23.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse24.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse24.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse25.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse25.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse26.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse26.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse27.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse27.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse28.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse28.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse29.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse29.checked) {
+//         joueur.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
 
-function verifReponse() {
-    let pionEnJeu = ""
-    listJoueur.forEach(joueur => {
-        pionEnJeu = joueur
-    });
-    if (reponse30.checked) {
-        joueur.avance(3)
-    } else {
+// function verifReponse() {
+//     let pionEnJeu = ""
+//     listJoueur.forEach(joueur => {
+//         pionEnJeu = joueur
+//     });
+//     if (reponse30.checked) {
+//         pionEnJeu.avance(3)
+//     } else {
 
-    }
-}
+//     }
+// }
