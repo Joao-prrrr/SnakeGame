@@ -56,7 +56,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
     
     verifieGagnant(this.case)
 
-    if()
+
 
     showQuestion(this.case)
 
@@ -88,8 +88,8 @@ function verifieGagnant(Jcase) {
 
 function echellesTuyeaux(pionPosition) {
     if (pionPosition.x === posiXY[20] && pionPosition.y === "18%") {
-        this.pionPosition.x = posiXY[3];
-        this.pionPosition.y = "50%";
+        pionPosition.x = posiXY[3];
+        pionPosition.y = "50%";
     } else if (pionPosition.x === posiXY[8] && pionPosition.y === "35%") {
         pionPosition.x = posiXY[22];
         pionPosition.y = "18%";
