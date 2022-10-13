@@ -234,13 +234,13 @@ function verifReponse() {
     let pionEnJeu = ""
 
     listPions.forEach(pion => {
-        if(pion.data.enJeu) {
+        if (pion.data.enJeu) {
             pionEnJeu = pion
         }
     })
 
     listRep.forEach(rep => {
-        if(rep.checked) {
+        if (rep.checked) {
             pionEnJeu.avance(3)
         }
     })
