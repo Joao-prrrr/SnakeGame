@@ -57,7 +57,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
     setTimeout(() => {
         verifieGagnant(this.case)
         showQuestion(this.case, this.data.nomJoueur)
-        echellesTuyeaux("case", points, this)
+        echellesTuyeaux(this)
     }, 100)
 
 }
@@ -89,6 +89,7 @@ function verifieGagnant(Jcase) {
     }
 }
 
+/*
 function echellesTuyeaux(posi, pt, pion) {
     if (posi.x === Object.keys(pt)[20] && posi.y === pt[Object.keys(pt)[20]]) {
         pion.avancer(3);
@@ -100,5 +101,20 @@ function echellesTuyeaux(posi, pt, pion) {
         pion.avancer(35);
     } else if (posi.x === Object.keys(pt)[34] && posi.y === pt[Object.keys(pt)[34]]) {
         pion.avancer(28);
+    }
+}
+*/
+
+function echellesTuyeaux(pion) {
+    if (pion.case === 20) {
+        pion.avancer(3 - 20);
+    } else if (pion.case === 8) {
+        pion.avancer(22 - 8);
+    } else if (pion.case === 12) {
+        pion.avancer(27 - 12);
+    } else if (pion.case === 26) {
+        pion.avancer(35 - 26);
+    } else if (pion.case === 34) {
+        pion.avancer(28 - 34);
     }
 }
