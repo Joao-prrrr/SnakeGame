@@ -63,6 +63,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
 }
 
 function showQuestion(jcase, nickname) {
+    nbRand = Math.floor(Math.random() * 30) + 1
     lstNbPremiers.forEach(nbQ => {
         if (jcase === nbQ) {
             let phrase = document.getElementById('joueurNickname').innerHTML
@@ -70,7 +71,7 @@ function showQuestion(jcase, nickname) {
             document.getElementById('joueurNickname').innerHTML = nickname + phrase
             planJeu.style.display = "none";
             sectionQ.style.display = "flex";
-            document.getElementById("question" + nbQ).style.display = "flex";
+            document.getElementById("question" + nbRand).style.display = "flex";
         }
     })
 }
