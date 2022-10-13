@@ -116,146 +116,378 @@ const joueur = document.getElementById("joueur");
 // joueur.textContent = nomPion + ", vous devez répondre";
 
 btnValider1.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider2.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider3.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider4.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider5.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider6.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider7.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider8.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider9.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider10.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider11.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider12.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider13.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider14.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider15.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider16.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider17.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider18.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider19.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider20.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider21.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider22.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider23.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider24.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider25.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider26.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider27.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider28.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
 
 btnValider29.addEventListener("click", function() {
+    let questionNb = "";
+    listQuestions.forEach(question => {
+        if(question.style.display == "flex") {
+            questionNb = question;
+        }
+    });
+    verifReponse()
+    questionNb.style.display = "none"
     question.style.display = "none";
     plan.style.display = "flex";
 });
