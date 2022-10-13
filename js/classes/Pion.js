@@ -69,7 +69,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
         verifieGagnant(this.case, this.data.nomJoueur)
         showQuestion(this.case, this.data.nomJoueur)
         echellesTuyeaux(this)
-    }, 100)
+    }, 1000)
 
 }
 
