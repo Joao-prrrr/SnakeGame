@@ -58,7 +58,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
         verifieGagnant(this.case)
         showQuestion(this.case, this.data.nomJoueur)
         echellesTuyeaux(this)
-    }, 100)
+    }, 1000)
 
 }
 
@@ -71,7 +71,7 @@ function showQuestion(jcase, nickname) {
             document.getElementById('joueurNickname').innerHTML = nickname + phrase
             planJeu.style.display = "none";
             sectionQ.style.display = "flex";
-            document.getElementById("question" + nbRand).style.display = "flex";
+            document.getElementById("question" + 30).style.display = "flex";
         }
     })
 }
