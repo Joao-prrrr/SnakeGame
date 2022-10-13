@@ -51,6 +51,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
         points = posiXY[this.case]
         this.pionPosition.x = Object.keys(points)[0]
         this.pionPosition.y = points[Object.keys(points)[0]]
+        mettreJoueurPosi(this.data.id, this.pionPosition.x, this.pionPosition.y)
     } else if (this.case > 38) {
         points = posiXY[38 - (this.case-38)]
         posiFin = posiXY[38]
