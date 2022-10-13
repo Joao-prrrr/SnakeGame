@@ -523,7 +523,7 @@ function verifReponse() {
 
     listRep.forEach(rep => {
         if (rep.checked) {
-            pionEnJeu.avance(3)
+            pionEnJeu.avancer(3)
         }
     })
 }
