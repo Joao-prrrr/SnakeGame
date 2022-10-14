@@ -43,6 +43,7 @@ Pion.prototype.mettrePionEnPlace = function() {
 }
 
 Pion.prototype.avancer = function(nbAleatoire) {
+
     this.data.case += nbAleatoire
     this.case += nbAleatoire
 
@@ -70,6 +71,7 @@ Pion.prototype.avancer = function(nbAleatoire) {
         verifieGagnant(this.case, this.data.nomJoueur)
         showQuestion(this.case, this.data.nomJoueur)
         echellesTuyeaux(this)
+        btnDe.style.display = "inline-block"
     }, 1000)
 
 }

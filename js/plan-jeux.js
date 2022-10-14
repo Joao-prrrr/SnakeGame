@@ -11,6 +11,7 @@ let pionOrangeObj = ""
 
 
 btnDe.addEventListener('click', async function() {
+    btnDe.style.display = "none"
     nbAleatoire = await lanceDe()
     jouerTour()
 })
